@@ -3,7 +3,7 @@ Class resources
 
 Textbook: http://interactivepython.org/runestone/default/user/login?_next=/runestone/default/index 
 
-*Course Learning Outcomes*
+**Course Learning Outcomes**
 The student should be able to:
 • Describe and define the Abstract Data Types (ADT) covered, including stacks, queues, priority queues, binary
 search trees, AVL trees, hash tables, and graphs.
