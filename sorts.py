@@ -5,16 +5,17 @@ import random
 import time
 
 
+def selection_sort(ints):
+    comparison_count = swap_count = 0
+    for i in range(len(ints) - 1, 0, -1):
+        position_of_max = 0
+        for j in range(1, i + 1):
+            comparison_count += 1
+            if ints[j] > ints[position_of_max]:
+                position_of_max = j
+        ints[i], ints[position_of_max] = ints[position_of_max], ints[i]
+    return comparison_count 
 
-def selection_sort(alist):
-    count = 0
-    for i in range(len(alist)):
-        for j in range(i + 1,len(alist)):
-            count += 1 
-            if alist[j] < alist[i]:
-                alist[i], alist[j] = alist[j], alist[i]
-    return count 
-           
 
 
 def insertion_sort(alist):
@@ -34,12 +35,12 @@ def insertion_sort(alist):
 def main():
     # Give the random number generator a seed, so the same sequence of 
     # random numbers is generated at each run
-    random.seed(1234) 
+    #random.seed(1234) 
     
     # Generate 5000 random numbers from 0 to 999,999
-    randoms = random.sample(range(1000000), 500000)
+    randoms = random.sample(range(1000000), 32000)
     start_time = time.time() 
-    comps = selection_sort(randoms)
+    comps = insertion_sort(randoms)
     stop_time = time.time()
     print(comps, stop_time - start_time)
 
